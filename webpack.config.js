@@ -58,11 +58,11 @@ module.exports = {
                 })
             },
             // {
-            //    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+            //    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,     //打包图片
             //    loader: 'file-loader?name=img/[hash:8].[name].[ext]'
             // },
             // {
-            //     test: /\.(gif|png|jpe?g|svg)$/i,
+            //     test: /\.(gif|png|jpe?g|svg)$/i,                     //压缩图片
             //     use: [
             //         'file-loader?name=img/[name].[ext]',
             //         {
