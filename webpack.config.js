@@ -46,10 +46,10 @@ module.exports = {
     ],
     module: {
         loaders: [
-            // {
-            //     test: /\.html$/,    // 打包HTML中的图片
-            //     loader: 'html-withimg-loader'
-            // },
+            {
+                test: /\.html$/,    // 打包HTML中的图片
+                loader: 'html-withimg-loader'
+            },
             {
                 test: /\.css$/,     //独立打包css文件
                 use: ExtractTextPlugin.extract({
@@ -57,10 +57,10 @@ module.exports = {
                     use: 'css-loader',
                 })
             },
-            // {
-            //    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,     //打包图片
-            //    loader: 'file-loader?name=img/[hash:8].[name].[ext]'
-            // },
+            {
+               test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,     //打包图片
+               loader: 'file-loader?name=img/[hash:8].[name].[ext]'
+            },
             // {
             //     test: /\.(gif|png|jpe?g|svg)$/i,                     //压缩图片
             //     use: [
@@ -94,10 +94,10 @@ module.exports = {
             //         },
             //     ],  
             // },
-            {
-                test: /\.(woff|woff2|otf|eot|svg|ttf)$/i,
-                loader: 'file-loader?name=./font/[name].[ext]'
-            }
+            // {
+            //     test: /\.(woff|woff2|otf|eot|svg|ttf)$/i,
+            //     loader: 'file-loader?name=./font/[name].[ext]'
+            // }
         ]
     },
     devServer: {
