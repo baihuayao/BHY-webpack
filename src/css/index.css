@@ -1,0 +1,1267 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	/*ios点击时会出现半透明效果，重置这个效果*/
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html,body{
+    position: fixed;
+	width: 100%;
+	height: 100%;
+	min-width: 320px;
+	overflow: hidden;
+	font-size: 14px;
+	font-family: "microsoft yahei";
+}
+img{
+	display: block;
+	width: 100%;
+}
+li{
+	list-style: none;
+}
+i{
+	font-style: normal;
+}
+
+/*---------- swiper ----------*/
+.swiper-container{
+    position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/* background-color: #000; */
+}
+.swiper-slide{
+	overflow: hidden !important;
+}
+/*---------- music ----------*/
+.music_icon{
+	position: absolute;
+	width: 6%;
+	top: 6%;
+	right: 3%;
+	z-index: 999999;
+}
+.music_animate{
+	/*both,动画会在两个方向上扩展动画属性*/ /*forwards,动画结束后应用该属性*/
+	-webkit-animation: music_animate 2s .5s linear infinite both;
+}
+@-webkit-keyframes music_animate{
+	0%		{-webkit-transform: rotate(0deg);}
+	100%	{-webkit-transform:rotate(360deg);}
+}
+
+/*---------- loading ---------- */
+.loading{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	z-index: 99;
+}
+.loading-logo{
+	position: absolute;
+	width: 16%;
+    top: 36%;
+    left: 42%;
+    -webkit-animation: loading-logo-animate 2s .5s linear infinite both;
+}
+@-webkit-keyframes loading-logo-animate{
+	0%		{-webkit-transform: rotate(0deg);}
+	100%	{-webkit-transform:rotate(360deg);}
+}
+.loading-logoText{
+	position: absolute;
+	width: 30%;
+    top: 47%;
+    left: 35%;
+}
+.loading-text{
+	position: absolute;
+    width: 100%;
+    top: 53%;
+    left: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+}
+/*---------- 通用 ----------*/
+.Bg{
+	height: 100%;
+}
+.Bg img{
+	height: 100%;
+}
+.container,.page{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.page{
+    display: none;
+}
+.black-bg{
+	background-color: #000;
+}
+/*---------- go ----------*/
+.go-text{
+	position: absolute;
+	width: 78%;
+    top: 6%;
+    left: 12%;
+}
+.go-openButton{
+	position: absolute;
+    width: 54%;
+    bottom: -3%;
+    left: 23%;
+}
+.go-light{
+	position: absolute;
+	width: 111%;
+    left: -47%;
+    bottom: -18%;
+    pointer-events: none;
+    transform: rotate(-90deg);
+}
+.bottom-text{
+	position: absolute;
+    width: 80%;
+    height: 22px;
+    line-height: 22px;
+    bottom: 0;
+    left: 10%;
+    text-align: center;
+    color: #d7d3bd;
+}
+.bottom-text2{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	font-size: .2rem;
+    transform: scale(.8);
+}
+.react1{
+	position: absolute;
+    margin-top: 9px;
+    left: 0;
+    transform: rotate(180deg);
+}
+.react2{
+	position: absolute;
+    margin-top: 9px;
+    right: 0;
+}
+/*---------- welocme ----------*/
+.welcome-borderShadow{
+	position: absolute;
+    width: 82%;
+    top: 4%;
+    left: 9%;
+    /* background-color: #000; */
+}
+.welcome-backButton{
+	position: absolute;
+    width: 26%;
+    height: 4%;
+    top: .6%;
+    right: 1%;
+    padding: 2%;
+    color: #9e8f72;
+}
+.welcome-backButton>i:nth-child(1){
+	position: absolute;
+    width: 20%;
+    top: 24%;
+    left: 47%;
+    transform: rotate(90deg);
+}
+.welcome-backButton>i:nth-child(2){
+	position: absolute;
+    width: 100%;
+    top: 20%;
+    left: -5%;
+    text-align: right;
+    font-size: .9rem;
+}
+.welcome-logoText{
+	position: absolute;
+    width: 30%;
+    top: 2.5%;
+    left: 36%;
+}
+.welcome-text{
+	position: absolute;
+    width: 100%;
+    top: 36%;
+    left: 0;
+    text-align: center;
+    color: #f5edc9;
+    font-size: 1.2rem;
+}
+.welcome-agreeButton{
+	position: absolute;
+    width: 66%;
+    height: 5%;
+    left: 20%;
+    top: 59%;
+}
+.welcome-agreeButton-bg{
+    position: absolute;
+    width: 9%;
+    top: -13%;
+    left: 4%;
+    padding: 4%;
+}
+.welcome-agreeButton-text{
+    position: absolute;
+    width: 91%;
+    top: 1%;
+    left: 18%;
+    color: #d7d3bd;
+    font-size: .9rem;
+    padding: 2%;
+}
+.welcome-showClause{
+    border-bottom: 1px solid #d7d3bd;
+}
+.welcome-conformButton1,.welcome-conformButton2{
+	position: absolute;
+	width: 60%;
+    top: 70%;
+    left: 20%;
+}
+.welcome-conformButton2{
+	top: 81%;
+}
+.welcome-bottomText2{
+	position: absolute;
+    width: 100%;
+    bottom: 1%;
+    left: 0;
+    text-align: center;
+    color: #d7d3bd;
+    font-size: .8rem;
+    transform: scale(.8);
+}
+.welcome-bottomText{
+	width: 90%;
+	bottom: -3%;
+    left: 5%;
+}
+.thanks-box{
+	position: absolute;
+    width: 90%;
+    height: 23%;
+    top: 36%;
+    left: 5%;
+    background-color: rgba(56,56,56,.9);
+    text-align: center;
+    color: #e8e0bd;
+    font-size: 1.3rem;
+    padding-top: 9%;
+	display: none;
+}
+.thanks-closeButton{
+	position: absolute;
+	width: 7%;
+    top: 0;
+    right: 0;
+    padding: 3%;
+}
+.welcome-shadow{
+    display: none;
+}
+.welcome-shadowText{
+    top: 37% !important;
+    height: 12% !important;
+}
+.welcome-shadowClose{
+    position: absolute;
+	width: 7%;
+    top: 0;
+    right: 0;
+    padding: 3%;
+}
+/*---------- play ----------*/
+.play-borderShadow{
+	position: absolute;
+    width: 82%;
+    top: 4%;
+    left: 9%;
+	/* background-color: #000; */
+}
+.play-backButton{
+    top: 0;
+}
+.play-textBox{
+	position: absolute;
+    width: 100%;
+    height: 6%;
+    top: 5.5%;
+    left: 0;
+    overflow: hidden;
+}
+.play-textBg{
+	position: absolute;
+	width: 103%;
+    top: 0;
+    left: -1.5%;
+}
+.play-text{
+	position: absolute;
+    width: 100%;
+    margin-top: 1.5%;
+    left: 0;
+    font-size: .9rem;
+    text-align: center;
+}
+.play-nextButton{
+	position: absolute;
+	width: 50%;
+    bottom: -3.2%;
+    left: 25.5%;
+}
+.material-box{
+	position: absolute;
+	width: 100%;
+    height: 86%;
+    top: 11%;
+    left: 0;
+}
+.material-box>ul{
+	height: 100%;
+}
+.material-box>ul>li{
+    text-align: center;
+    color: #fff;
+    font-size: .5rem;
+}
+.material-box>ul>li>i{
+    position: relative;
+    display: inline-block;
+    width: 27%;
+    margin: 0 1%;
+}
+.materialN-ani{
+    -webkit-animation: materialN-ani-animate 4s  linear infinite both;
+}
+@-webkit-keyframes materialN-ani-animate{
+	0%		{-webkit-transform: rotateY(0deg);}
+	100%	{-webkit-transform:rotateY(360deg);}
+}
+.material-text{
+    position: absolute;
+    width: 100%;
+    top: 95%;
+    left: 0;
+    color: #fff;
+    font-size: .5rem;
+    transform: scale(.9);
+}
+.play-bottom-text{
+    width: 100%;
+    left: 0;
+    bottom: -10%;
+}
+.bottom-text-ani{
+    -webkit-animation: bottom-text-animate 1.2s linear infinite both;
+}
+@-webkit-keyframes bottom-text-animate{
+    0%		{-webkit-transform: scale(1);}
+    50%		{-webkit-transform: scale(1.08);}
+    100%	{-webkit-transform: scale(1);}
+}
+.play-shadow{
+    display: none;
+}
+.play-shadowText{
+    top: 37% !important;
+    height: 12% !important;
+}
+/*---------- play2 ----------*/
+.play2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.wine-box{
+    position: absolute;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    overflow: hidden;
+}
+.play2 .play-textBox,.play2-backButton{
+    z-index: 1;
+}
+.wine-leftButton,.wine-rightButton{
+    position: absolute;
+    width: 7%;
+    top: 49%;
+    left: 2%;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+.wine-rightButton{
+    left: 90%;
+    transform: rotate(-90deg);
+}
+.play2 .play-text{
+    margin-top: 1%;
+    font-size: 1rem;
+}
+.play2-text{
+    position: absolute;
+    width: 100%;
+    bottom: 4%;
+    left: 0;
+    text-align: center;
+    font-size: .8rem;
+    color: #d7d3bd;
+    z-index: 1;
+}
+.play2-text-icon{
+    position: absolute;
+    width: 4%;
+    bottom: 10%;
+    right: 12%;
+}
+.play-beginButton{
+    z-index: 1;
+}
+.play2-bottom-text{
+    width: 100%;
+    bottom: -10%;
+    left: 0;
+}
+.swiper-containerPlay{    
+    width: 140%;
+    left: -20%;
+}
+/*---------- play-wait ----------*/
+.play-wait-text{
+    position: absolute;
+    width: 100%;
+    bottom: -2.5%;
+    left: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #d7d3bd;
+}
+.play-wait-logo{
+    position: absolute;
+	width: 16%;
+    top: 6%;
+    left: 42%;
+}
+.play-wait-logoText{
+	position: absolute;
+	width: 30%;
+    top: 16%;
+    left: 35%;
+}
+.play-wait-symbol{
+    position: absolute;
+    width: 70%;
+    top: 28%;
+    left: 15%;
+}
+.play-wait-gif{
+    position: absolute;
+    width: 90%;
+    top: 37%;
+    left: 5%;
+}
+.play-wait-shake{
+    position: absolute;
+    width: 20%;
+    top: 75%;
+    left: 40%;
+    -webkit-animation: play-wait-shake-ani-animate .8s  linear infinite both;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+}
+@-webkit-keyframes play-wait-shake-ani-animate{
+	0%		{-webkit-transform: rotate(0)}
+    25%	    {-webkit-transform: rotate(20deg)}
+    50%	    {-webkit-transform: rotate(0)}
+    75%	    {-webkit-transform: rotate(-20deg)}
+    100%	{-webkit-transform: rotate(0)}
+}
+.play-wait-bottomText{
+    width: 100%;
+    left: 0;
+    bottom: -10%;
+}
+/*---------- player ----------*/
+.player-logoText{
+    position: absolute;
+    width: 14%;
+    top: 2%;
+    left: 43%;
+}
+.player-userBox{
+    position: absolute;
+    width: 74%;
+    top: 20%;
+    left: 13%;
+}
+.player-user{
+    position: absolute;
+    width: 40%;
+    top: 0;
+    left: 7%;
+    color: #d7d3bd;
+    font-size: .7rem;
+    transform: scale(.9);
+    text-align: center;
+}
+.player-number{
+    position: absolute;
+    width: 40%;
+    top: 11%;
+    right: 10%;
+    color: #d7d3bd;
+    border-left: 1px solid #fff;
+    text-align: center;
+}
+.player-text{
+    position: absolute;
+    width: 60%;
+    height: 12%;
+    top: 27%;
+    left: 15%;
+    padding: 4%;
+    color: #d7d3bd;
+    overflow: hidden;
+    font-size: .8rem;
+    z-index: 2;
+    background-color: rgba(65,65,65,.4);
+}
+.player-textNext{
+    position: absolute;
+    width: 6%;
+    top: 43%;
+    left: 73%;
+    padding: 3%;
+    z-index: 3;
+}
+.player-img2{
+    position: absolute;
+    width: 16%;
+    top: 50%;
+    right: 18%;
+    z-index: 1;
+}
+.player-text2{
+    position: absolute;
+    width: 50%;
+    top: 65%;
+    right: 1%;
+    color: #d7d3bd;
+    text-align: center;
+    z-index: 1;
+}
+.player-react{
+    position: absolute;
+    width: 29%;
+    top: 70%;
+    right: 10%;
+    z-index: 1;
+}
+.player-text3{
+    position: absolute;
+    width: 50%;
+    top: 71%;
+    right: 1%;
+    color: #d7d3bd;
+    text-align: center;
+    font-size: .8rem;
+    transform: scale(.9);
+    z-index: 1;
+}
+.player-recentlyButton{
+    position: absolute;
+    width: 22%;
+    bottom: -4%;
+    left: 16%;
+    z-index: 1;
+}
+.player-voteButton{
+    position: absolute;
+    width: 22%;
+    bottom: -4%;
+    left: 36%;
+    z-index: 1;
+}
+.player-signUpButton{
+    position: absolute;
+    width: 22%;
+    bottom: -4%;
+    left: 56%;
+    z-index: 1;
+}
+.player-img{
+    position: absolute;
+    width: 97%;
+    bottom: -19%;
+    left: -36%;
+    pointer-events: none;
+}
+.player-showMore{
+    position: absolute;
+    width: 26%;
+    height: 4%;
+    top: .6%;
+    left: 1%;
+    padding: 2%;
+}
+.player-showMore>i:nth-child(1){
+    position: absolute;
+    width: 20%;
+    left: 6%;
+    top: 24%;
+    transform: rotate(90deg);
+}
+.player-showMore>i:nth-child(2){
+    position: absolute;
+    width: 86%;
+    left: 19%;
+    top: 20%;
+    text-align: center;
+    color: #9e8f72;
+    font-size: .9rem;
+}
+.player-bottom-text{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -10%;
+    z-index: 2;
+}
+.player-shadow{
+    display: none;
+}
+.player-shadowText{
+    top: 37% !important;
+    height: 12% !important;
+}
+/*---------- main ----------*/
+.main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.main-logoText{
+    position: absolute;
+    width: 16%;
+    top: 2%;
+    left: 42%;
+    z-index: 2;
+}
+.main-playerBox,.main-playerBoxShadow{
+    position: absolute;
+    width: 98%;
+    height: 54%;
+    top: 13%;
+    left: 1%;
+}
+.main-playerBoxShadow{
+    display: none;
+    z-index: 1;
+}
+.main-bottomText{
+    width: 82%;
+    left: 9%;
+    bottom: -3%;
+}
+.main-playerBg{
+    position: absolute;
+    width: 108%;
+    left: -4%;
+    top: 46%;
+}
+.main-player{
+    position: absolute;
+    width: 68%;
+    left: 17%;
+    bottom: 1%;
+}
+.main-playerLight{
+    position: absolute;
+    width: 136%;
+    left: -22%;
+    bottom: -11%;
+    transform: scaleX(-1);
+}
+.main-playerName{
+    position: absolute;
+    width: 62%;
+    top: 67%;
+    left: 19%;
+    z-index: 1;
+}
+.main-playerName>i:nth-child(2){
+    position: absolute;
+    width: 100%;
+    top: 18%;
+    left: 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+}
+.main-playerName>i:nth-child(3){
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 60%;
+    text-align: center;
+    font-size: .5rem;
+    color: #000;
+}
+.main-showButton{
+    position: absolute;
+    width: 62%;
+    top: 76%;
+    left: 19%;
+}
+.main-testButton{
+    position: absolute;
+    width: 62%;
+    top: 84%;
+    left: 19%;
+}
+.main-signUpButton{
+    position: absolute;
+    width: 62%;
+    top: 92%;
+    left: 19%;
+}
+.main-leftButton{
+    position: absolute;
+    width: 6%;
+    top: 40%;
+    left: -1%;
+    padding: 3%;
+    z-index: 1;
+    transform: rotate(90deg);
+}
+.main-rightButton{
+    position: absolute;
+    width: 6%;
+    top: 40%;
+    right: -1%;
+    padding: 3%;
+    z-index: 1;
+    transform: rotate(-90deg);
+}
+/*---------- player-recently ----------*/
+.recently-user{
+    position: absolute;
+    width: 100%;
+    top: 28%;
+    left: 0;
+    text-align: center;
+    color: #d7d3bd;
+}
+.recently-user>i:nth-child(1){
+    font-size: 1.3rem;
+}
+.recently-user>i:nth-child(2){
+    font-size: 1.1rem;
+}
+.recently-user>i:nth-child(4){
+    font-size: 1.2rem;
+}
+.recently-user-icon{
+    position: absolute;
+    width: 24%;
+    top: 19%;
+    right: 3%;
+}
+.recently-react{
+    position: absolute;
+    width: 60%;
+    top: 41%;
+    left: 20%;
+}
+.recently-logoText{
+    top: 5%;
+}
+.player-info-title{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    color: #d7d3bd;
+}
+.player-info-title>i:nth-child(1){
+    font-size: 1.4rem;
+}
+.player-info-title>i:nth-child(3){
+    font-size: 1.1rem;
+}
+.player-info-title>i:nth-child(6){
+    font-size: .5rem;
+}
+.player-info-add{
+    position: absolute;
+    width: 90%;
+    top: 74%;
+    left: 5%;
+    text-align: center;
+    color: #d7d3bd;
+}
+.player-info-time{
+    /* position: absolute;
+    width: 100%;
+    top: 76%;
+    left: 0;
+    text-align: center;
+    color: #d7d3bd; */
+}
+.player-recently-bottom-text{
+    width: 90%;
+    left: 5%;
+    bottom: -3%;
+}
+/*---------- lottery ----------*/
+.lottery-text{
+    position: absolute;
+    width: 100%;
+    top: 26%;
+    left: 0;
+    text-align: center;
+    color: #d7d3bd;
+    font-size: 1.2rem;
+}
+.lottery-react{
+    position: absolute;
+    width: 60%;
+    top: 38%;
+    left: 20%;
+}
+.lottery-logo{
+    position: absolute;
+    width: 28%;
+    top: 54%;
+    left: 36%;
+}
+.lottery-logoText2{
+    position: absolute;
+    width: 60%;
+    top: 71%;
+    left: 20%;
+}
+/*---------- lottery-end ----------*/
+.lottery-end-logo{
+    position: absolute;
+    width: 14%;
+    top: 3%;
+    left: 43%;
+}
+.lottery-end-logoText{
+    position: absolute;
+    width: 28%;
+    top: 12%;
+    left: 36%;
+}
+.lottery-end-A{
+    position: absolute;
+    width: 98%;
+    height: 29%;
+    top: 20%;
+    left: 1%;
+}
+.lottery-end-text2{
+    position: absolute;
+    width: 60%;
+    top: 82%;
+    left: 20%;
+    text-align: center;
+    color: #d7d3bd;
+    font-size: 1rem;
+}
+.lottery-end-text2>i:nth-child(1){
+    font-size: .5rem;
+}
+.lottery-end-text2>i:nth-child(3){
+    border-bottom: 2px solid #433022;
+}
+.lottery-end-text2>i:nth-child(5){
+     border-bottom: 1px solid #433022;
+}
+.lottery-end-text2>i:nth-child(7){
+    position: absolute;
+    width: 5.4%;
+    right: 20%;
+    top: 18%;
+    transform: rotate(-90deg);
+}
+.lottery-end-coupons{
+    position: absolute;
+    width: 58%;
+    top: 20%;
+    left: 21%;
+}
+.lottery-end-react{
+    position: absolute;
+    width: 70%;
+    top: 53%;
+    left: 15%;
+}
+.lottery-end-showRankingButton{
+    position: absolute;
+    width: 54%;
+    top: 69%;
+    left: 23%;
+}
+.lottery-end-erCode-text{
+    position: absolute;
+    width: 100%;
+    top: 78%;
+    left: 0;
+    text-align: center;
+    color: #d7d3bd;
+    font-size: 1rem;
+}
+.lottery-end-bottom-text{
+    width: 90%;
+    left: 5%;
+    bottom: -3%;
+}
+.lottery-end-gilf{
+    position: absolute;
+    width: 98%;
+    top: 0;
+    left: 1%;
+}
+/*---------- clause ----------*/
+.clause-bottomText{
+    width: 80%;
+    left: 10%;
+    bottom: -1.3%;
+}
+/*---------- rule-react ----------*/
+.rule-react{
+    position: absolute;
+    width: 70%;
+    top: 18%;
+    left: 15%;
+}
+.rule-textBox{
+    position: absolute;
+    width: 86%;
+    height: 61%;
+    top: 32%;
+    left: 7%;
+    color: #d7d3bd;
+    font-size: .6rem;
+    overflow-y: scroll;
+}
+.rule-textMax{
+    position: absolute;
+    top: 23%;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+    color: #d7d3bd;
+}
+.rule-textMax>i{
+    font-size: .6rem;
+}
+.rule-next{
+    position: absolute;
+    width: 9%;
+    bottom: 1%;
+    left: 40%;
+}
+.rule-agreeButton{
+    position: absolute;
+    width: 52%;
+    bottom: -3%;
+    left: 24%;
+}
+.rule-bottom-text{
+    width: 100%;
+    left: 0;
+    bottom: -10%;
+}
+/*---------- info-fillIn ----------*/
+.info-filIn-logoText{
+    position: absolute;
+    width: 20%;
+    top: 3%;
+    left: 40%;
+}
+.info-fillIn-text{
+    position: absolute;
+    width: 100%;
+    top: 26%;
+    left: 0;
+    text-align: center;
+    color: #d7d3bd;
+}
+.info-fillIn-text>i:nth-child(1){
+    font-size: 1.1rem;
+}
+.info-fillIn-text>i:nth-child(3){
+    position: absolute;
+    width: 100%;
+    top: 98%;
+    left: 0;
+    font-size: .8rem;
+}
+.info-fillIn-rectangle2{
+    position: absolute;
+    width: 117%;
+    top: 36%;
+    left: -8%;
+}
+.name-input{
+    position: absolute;
+    width: 72%;
+    height: 6%;
+    top: 44%;
+    left: 14%;
+}
+.phone-input{
+    position: absolute;
+    width: 72%;
+    height: 6%;
+    top: 53%;
+    left: 14%;
+}
+.add-input{
+    position: absolute;
+    width: 72%;
+    height: 6%;
+    top: 62%;
+    left: 14%;
+    overflow: hidden;
+}
+#city{
+    position: absolute;
+    width: 78%;
+    height: 100%;
+    top: 0;
+    left: 31%;
+    border: 0;
+    background-color: transparent;
+    color: #d7d3bd;;
+}
+.text-input{
+    position: absolute;
+    width: 72%;
+    height: 6%;
+    top: 71%;
+    left: 14%;
+}
+.info-fillIn-text2{
+    position: absolute;
+    width: 100%;
+    top: 78%;
+    left: 0;
+    text-align: center;
+    color: #d7d3bd;
+    font-size: .8rem;
+    transform: scale(.9);
+}
+.info-fillIn-privacyButton{
+    position: absolute;
+    width: 26%;
+    top: 85%;
+    left: 37%;
+}
+.info-fillIn-text3{
+    position: absolute;
+    width: 100%;
+    top: 92%;
+    left: 0;
+    text-align: center;
+    color: red;
+    font-size: .8rem;
+    display: none;
+}
+.info-fillIn-text4{
+    position: absolute;
+    width: 28%;
+    top: 59.3%;
+    left: 20%;
+    /* text-align: center;
+    color: red;
+    font-size: .4rem;
+    transform: scale(.9); */
+    display: none;
+}
+.submit-button{
+    position: absolute;
+    width: 52%;
+    bottom: -3%;
+    left: 24%;
+}
+.submit-successBox{
+    display: none;
+}
+.shadowBg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+    z-index: 3;
+}
+.closeN{
+    position: absolute;
+	width: 7%;
+    top: 0;
+    right: 0;
+    padding: 3%;
+}
+.shadowTextN{
+    position: absolute;
+    width: 90%;
+    height: 23%;
+    top: 36%;
+    left: 5%;
+    background-color: rgba(56,56,56,.9);
+    text-align: center;
+    color: #e8e0bd;
+    font-size: 1.3rem;
+    padding-top: 9%;
+}
+.info-fillIn input{
+    position: absolute;
+    width: 80%;
+    height: 93%;
+    top: 0;
+    left: 10%;
+    background-color: transparent;
+    text-align: center;
+    color: #d7d3bd;
+    border: 0;
+}
+.info-fillIn input::-webkit-input-placeholder {
+　　color:#d7d3bd;
+    text-align: center;
+}
+.lottery-end input::input-placeholder {
+　　color:#d7d3bd;
+    text-align: center;
+}
+.info-fillIn-bottom-text{
+    width: 100%;
+    left: 0;
+    bottom: -10%;
+}
+.submit-successText{
+    line-height: 150%;
+}
+.submit-successText i{
+    font-size: 1.1rem;
+}
+/*---------- ranking ----------*/
+.ranking-rectangle2{
+    position: absolute;
+    width: 117%;
+    top: 25%;
+    left: -8%;
+}
+.ranking-box{
+    position: absolute;
+    width: 96%;
+    height: 70%;
+    top: 28%;
+    left: 2%;
+    overflow: hidden;
+}
+.ranking-box>ul{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.ranking-box>ul>li{
+    width: 100%;
+    height: 11%;
+    position: relative;
+}
+.ranking-bg{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0;
+}
+.ranking-node{
+    position: absolute;
+    width: 10%;
+    left: 5%;
+    top: -9%;
+    font-size: 1.2rem;
+}
+.ranking-node>i{
+    font-size:1.8rem;
+}
+.ranking-img{
+    position: absolute;
+    width: 8.3vw;
+    height: 8.3vw;
+    left: 24%;
+    border-radius: 50%;
+    border: 2px solid #d7d3bd;
+    background-color: #000;
+    overflow: hidden;
+}
+.ranking-name{
+    position: absolute;
+    width: 42%;
+    top: 18%;
+    left: 37%;
+    color: #d7d3bd;
+    font-size: .9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ranking-num{
+    position: absolute;
+    width: 19%;
+    top: 17%;
+    right: 2%;
+    color: #d7d3bd;
+    font-size: 1rem;
+}
+.ranking-bottom-text{
+    width: 100%;
+    left: 0;
+    bottom: -8%;
+}
+/*---------- privacy ----------*/
+.privacy-bottom-text{
+    width: 100%;
+    left: 0%;
+    bottom: -10%;
+}
+/*---------- vertical-page ----------*/
+.vertical-page{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+/*----------  ----------*/

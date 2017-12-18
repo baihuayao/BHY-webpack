@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack =require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: './start.js',
     output: {
@@ -37,19 +38,24 @@ module.exports = {
                 reduce_vars: true,
             }
         }),
-        new ExtractTextPlugin({
+        new ExtractTextPlugin({         // 独立打包css文件
             filename: (getPath) =>{
                 return getPath('css/index.[chunkhash].css').replace('css/js','css');
             },
             allChunks: true
-        })
+        }),
+        new CopyWebpackPlugin([      // 拷贝资源文件
+            { from: __dirname+'/src/img/', to: 'img/', toType:'dir'},
+            { from: __dirname+'/src/audio/', to: 'audio/', toType:'dir'},
+            { from: __dirname+'/Readme.md',to: 'Readme.md'}
+        ])
     ],
     module: {
         loaders: [
-            {
-                test: /\.html$/,    // 打包HTML中的图片
-                loader: 'html-withimg-loader'
-            },
+            // {
+            //     test: /\.html$/,    // 打包HTML中的图片
+            //     loader: 'html-withimg-loader'
+            // },
             {
                 test: /\.css$/,     //独立打包css文件
                 use: ExtractTextPlugin.extract({
@@ -57,10 +63,10 @@ module.exports = {
                     use: 'css-loader',
                 })
             },
-            {
-               test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,     //打包图片
-               loader: 'file-loader?name=img/[hash:8].[name].[ext]'
-            },
+            // {
+            //    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,     //打包图片
+            //    loader: 'file-loader?name=img/[hash:8].[name].[ext]'
+            // },
             // {
             //     test: /\.(gif|png|jpe?g|svg)$/i,                     //压缩图片
             //     use: [
