@@ -7,10 +7,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: './start.js',
     output: {
-        filename: 'js/bundle.[chunkhash].js',
+        filename: 'js/[chunkhash].js',
         path: path.resolve(__dirname,'dist'),
-        // publicPath: 'dist/'
-        // sourceMapFilename: '[name].map'
+        publicPath: 'dist/',
+        sourceMapFilename: '[name].map'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),   // 清理文件
@@ -32,7 +32,7 @@ module.exports = {
                 warnings: false,
                 // 删除所有的 'console'语句
                 drop_console: true,
-                //内嵌定义了但是只用到一次的变量
+                // 内嵌定义了但是只用到一次的变量
                 collapse_vars: true,
                 // 提取出出现多次但是没有定义成变量去引用的静态值
                 reduce_vars: true,
@@ -40,70 +40,36 @@ module.exports = {
         }),
         new ExtractTextPlugin({         // 独立打包css文件
             filename: (getPath) =>{
-                return getPath('css/index.[chunkhash].css').replace('css/js','css');
+                return getPath('css/[chunkhash].css').replace('css/js','css');
             },
             allChunks: true
         }),
         new CopyWebpackPlugin([      // 拷贝资源文件
-            { from: __dirname+'/src/img/', to: 'img/', toType:'dir'},
+        //     { from: __dirname+'/src/img/', to: 'img/', toType:'dir'},
             { from: __dirname+'/src/audio/', to: 'audio/', toType:'dir'},
             { from: __dirname+'/Readme.md',to: 'Readme.md'}
-        ])
+        ]),
     ],
     module: {
         loaders: [
-            // {
-            //     test: /\.html$/,    // 打包HTML中的图片
-            //     loader: 'html-withimg-loader'
-            // },
             {
                 test: /\.css$/,     //独立打包css文件
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader',
+                    use:[
+                        {
+                            loader:'css-loader',
+                            options:{
+                                minimize: true,     // 启用压缩
+                            }
+                        }
+                    ]
                 })
             },
-            // {
-            //    test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,     //打包图片
-            //    loader: 'file-loader?name=img/[hash:8].[name].[ext]'
-            // },
-            // {
-            //     test: /\.(gif|png|jpe?g|svg)$/i,                     //压缩图片
-            //     use: [
-            //         'file-loader?name=img/[name].[ext]',
-            //         {
-            //         loader: 'image-webpack-loader',
-            //         options: {
-            //             mozjpeg: {
-            //                 quality: 95
-            //             },
-            //             pngquant: {
-            //                 quality: "65-90",
-            //                 speed: 4
-            //             },
-            //             svgo: {
-            //                 plugins: [{
-            //                     removeViewBox: false
-            //                 }, {
-            //                     removeEmptyAttrs: false
-            //                 }]
-            //             },
-            //             gifsicle: {
-            //                 optimizationLevel: 7,
-            //                 interlaced: false
-            //             },
-            //             optipng: {
-            //                 optimizationLevel: 7,
-            //                 interlaced: false
-            //             }
-            //         },
-            //         },
-            //     ],  
-            // },
-            // {
-            //     test: /\.(woff|woff2|otf|eot|svg|ttf)$/i,
-            //     loader: 'file-loader?name=./font/[name].[ext]'
-            // }
+            {
+                test: /\.(woff|woff2|otf|eot|svg|ttf)$/i,
+                loader: 'file-loader?name=./font/[name].[ext]'
+            }
         ]
     },
     devServer: {
