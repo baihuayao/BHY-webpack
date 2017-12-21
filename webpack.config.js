@@ -45,9 +45,10 @@ module.exports = {
             allChunks: true
         }),
         new CopyWebpackPlugin([      // 拷贝资源文件
-        //     { from: __dirname+'/src/img/', to: 'img/', toType:'dir'},
-            { from: __dirname+'/src/audio/', to: 'audio/', toType:'dir'},
-            { from: __dirname+'/Readme.md',to: 'Readme.md'}
+            // { from: __dirname+'/src/img/', to: 'img/', toType:'dir'},         // 图片文件夹
+            // { from: __dirname + '/src/font/', to: 'font/', toType: 'dir' },   // 字体文件夹
+            // { from: __dirname+'/src/audio/', to: 'audio/', toType:'dir'},     // 音频文件夹
+            // { from: __dirname+'/Readme.md',to: 'Readme.md'}                   // readme
         ]),
     ],
     module: {
