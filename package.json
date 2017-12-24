@@ -15,7 +15,7 @@
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.2",
     "webpack-spritesmith": "^0.3.3",
-    "gulp-smushit": "^1.2.0"
+    "gulp-tinypng-nokey": "^1.1.0"
   },
   "dependencies": {
     "jQuery": "^1.7.4",
@@ -26,5 +26,3 @@
     "dev": "webpack --display-modules --profile --progress --colors --display-error-details"
   }
 }
-
-

@@ -10,4 +10,4 @@ npm install
 npm run build
 
 #### 图片压缩
-gulp default
+gulp tinypng
