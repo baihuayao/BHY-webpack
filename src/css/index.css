@@ -1,0 +1,550 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	/*ios点击时会出现半透明效果，重置这个效果*/
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html,body{
+	width: 100%;
+	height: auto;
+	min-width: 320px;
+	min-height: 100%;
+	font-size: 14px;
+    font-family: "microsoft yahei";
+    position: relative;
+}
+img{
+	display: block;
+	width: 100%;
+}
+li{
+	list-style: none;
+}
+i{
+	font-style: normal;
+}
+/*---------- 通用 ----------*/
+.Bg{
+	height: 100%;
+}
+.Bg img{
+	height: 100%;
+}
+.container,.ani-box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/*---------- container ----------*/
+.title{
+	position: absolute;
+    width: 60%;
+    top: 3%;
+    left: 20%;
+}
+.coupons{
+	position: absolute;
+    width: 74%;
+    top: 12%;
+    left: 12%;;
+}
+.play-bg,.play-over{
+	position: absolute;
+    width: 60%;
+    top: 23%;
+    left: 20%;
+}
+.play-bg{
+    display: none;
+}
+.play-button{
+    position: absolute;
+    width: 96%;
+    top: 2%;
+    left: 2%;
+    -webkit-animation: play_animate 1.1s linear infinite both;
+}
+.integral-box{
+    position: absolute;
+    width: 80%;
+    height: 20%;
+    top: 42%;
+    left: 10%;
+}
+.money-icon{
+    position: absolute;
+    width: 8%;
+    top: 8%;
+    left: 8.5%;
+}
+.integral-text{
+    position: absolute;
+    width: 60%;
+    left: 19%;
+    top: 10%;
+    color: #fff;
+    font-size: 1rem;
+}
+.progress-bal-box{
+    position: absolute;
+    width: 83%;
+    height: 5%;
+    top: 21%;
+    left: 8.5%;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 0;
+    overflow: hidden;
+}
+.progress-bal{
+	position: absolute;
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #00b7ee;
+    border: 0;
+    border-radius: 5px 0 0 5px;
+}
+.people-text{
+    position: absolute;
+    width: 83%;
+    left: 8.5%;
+    top: 26%;
+    color: #fff;
+}
+.already-text,.remaining-text{
+	position: absolute;
+	width: 50%;
+	font-size: 1rem;
+}
+.already-text{
+	left: 0;
+	text-align: left;
+}
+.remaining-text{
+	right: 0;
+	text-align: right;
+}
+.play-num-box{
+    position: absolute;
+    width: 66%;
+    top: 52%;
+    left: 17%;
+}
+.play-num{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0%;
+    font-size: 12vw;
+    color: #e7e8e9;
+    text-align: center;
+    font-family: "microsoft yahei";
+}
+.winning-box{
+    position: absolute;
+    width: 68%;
+    top: 60%;
+    left: 17%;
+}
+.winning-box-list,.winning-box-my{
+    position: absolute;
+    width: 98%;
+    height: 65%;
+    top: 34%;
+    left: 1%;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.winning-box-list{
+    z-index: 1;
+}
+.winning-box-my{
+    z-index: 0;
+}
+.winning-box-my ul{
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    margin: 2% 0;
+}
+.winning-box-list ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+.winning-box-list li{
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    font-size: 1rem;
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.winning-box-my li{
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    font-size: 1.1rem;
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.winning-list,.my-winning{
+    position: absolute;
+    width: 50%;
+    height: 19%;
+    top: 0;
+}
+.winning-list{
+    left: 0;
+}
+.my-winning{
+    right: 0;
+}
+.rule-box{
+    position: absolute;
+    width: 68%;
+    top: 66%;
+    left: 17%;
+}
+.rule-title{
+    position: absolute;
+    width: 80%;
+    top: 33%;
+    left: 10%;
+}
+.rule-text{
+    position: absolute;
+    width: 80%;
+    height: 47%;
+    top: 50%;
+    left: 10%;
+    overflow-y: auto;
+    font-size: 1rem;
+    color: #000;
+}
+.buy-box{
+    position: absolute;
+    width: 66%;
+    top: 26%;
+    left: 17%;
+    z-index: 2;
+    font-size: 1.1rem;
+    color: #0303ac;
+    display: none;
+}
+.close{
+    position: absolute;
+    width: 12%;
+    top: 10%;
+    left: 81%;
+}
+.buy-t1{
+    position: absolute;
+    width: 80%;
+    left: 11%;
+    top: 14%;
+}
+.buy-t2{
+    position: absolute;
+    width: 80%;
+    left: 11%;
+    top: 31%;
+}
+.buy-t3{
+    position: absolute;
+    width: 80%;
+    left: 11%;
+    top: 49%;
+}
+.buy-t4{
+    position: absolute;
+    width: 80%;
+    left: 11%;
+    top: 64%;
+    font-size: 1rem;
+    color: gray;
+}
+.amount-box{
+    position: absolute;
+    width: 43%;
+    height: 82%;
+    top: 7%;
+    border: 1px solid #000;
+    left: 38%;
+    color: #000;
+    text-align: center;
+    font-size: 1rem;
+    overflow: hidden;
+}
+.add{
+    position: absolute;
+    width: 25%;
+    height: 120%;
+    top: -7%;
+    left: 0%;
+    border-right: 1px solid gray;
+    background-color: #e5e5e5;
+}
+.less{
+    position: absolute;
+    width: 25%;
+    height: 120%;
+    right: 1%;
+    top: -7%;
+    border-left: 1px solid gray;
+    background-color: #e5e5e5;
+}
+.amount-num{
+    position: absolute;
+    width: 100%;
+    top: -3%;
+    left: 0%;
+}
+.buy-button{
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 76%;
+}
+.jfbz,.gmcg{
+    position: absolute;
+    width: 30%;
+    top: 31%;
+    left: 35%;
+    z-index: 2;
+    display: none;
+}
+.gmcg{
+    z-index: 3;
+}
+.ddsx{
+    position: absolute;
+    width: 84%;
+    top: 25%;
+    left: 8%;
+    z-index: 2;
+    display: none;
+}
+.ccsx{
+    position: absolute;
+    width: 40%;
+    top: 32%;
+    left: 30%;
+     z-index: 2;
+     display: none;
+}
+.info-box,.info-box2{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: 3;
+    display: none;
+}
+.info-box>div{
+    border: 1px solid #1473c5;
+    border-radius: 6px;
+}
+.info-box i{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    color: gray;
+}
+.info-box input{
+    position: absolute;
+    width: 45vw;
+    height: 7vw;
+    top: 1vw;
+    left: 20vw;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.add-bg input{
+    top: 10vw;
+    height: auto;
+    border-bottom: 1px solid #1473c5;
+}
+.name-bg{
+    position: absolute;
+    width: 70vw;
+    height: 9vw;
+    top: 41vw;
+    left: 15vw;
+    background-color: #fff;
+}
+.phone-bg{
+    position: absolute;
+    width: 70vw;
+    height: 9vw;
+    top: 56vw;
+    left: 15vw;
+    background-color: #fff;
+}
+.add-bg{
+    position: absolute;
+    width: 70vw;
+    height: 25vw;
+    top: 71vw;
+    left: 15vw;
+    background-color: #fff;
+}
+.submit-button{
+    position: absolute;
+    width: 70vw;
+    height: 30px;
+    line-height: 30px;
+    top: 109vw;
+    left: 15vw;
+    text-align: center;
+    background-color: #1473c5;
+    color: #fff;
+}
+.close-button{
+    position: absolute;
+    width: 70vw;
+    height: 30px;
+    line-height: 30px;
+    top: 121vw;
+    left: 15vw;
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.red-text{
+    color: red !important;
+    text-decoration: underline;
+}
+.ticket-box{
+    position: absolute;
+    width: 60%;
+    top: 32%;
+    left: 20%;
+}
+.ticket-title{
+    position: absolute;
+    width: 60%;
+    top: 15%;
+    left: 9%;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.ticket-text{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 0%;
+    text-align: center;
+    font-size: 1.5rem;
+    -webkit-user-select: all;
+    user-select: all;
+}
+.ticket-end{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 70%;
+    text-align: center;
+    color: gray;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.ticket-close{
+    position: absolute;
+    width: 13%;
+    top: 13%;
+    left: 79%;
+}
+/*---------- ani-box ----------*/
+.play-icon{
+    position: absolute;
+    width: 7.4%;
+    top: 26.5%;
+    left: 71%;
+}
+.play-icon2{
+    top: 38%;
+    left: 22%;
+}
+.polyline1{
+    position: absolute;
+    width: 7%;
+    top: 9%;
+    left: 14%;
+    -webkit-animation: polyline1_animate 20s linear infinite both;
+}
+.polylineN{
+    -webkit-animation: polyline2_animateN 8s linear infinite both;
+}
+.polyline2{
+    position: absolute;
+    width: 14%;
+    top: 2.5%;
+    left: 71%;
+    -webkit-animation: polyline2_animate 30s linear infinite both;
+}
+.polyline2N{
+    -webkit-animation: polyline2_animateN 8s linear infinite both;
+}
+@-webkit-keyframes polyline1_animate{
+    0%		{-webkit-transform: translate(0px,0px)}
+    25%	    {-webkit-transform: translate(14px,16px);} 
+    50%		{-webkit-transform: translate(0px,0px)}
+    75%	    {-webkit-transform: translate(-14px,16px);} 
+	100%	{-webkit-transform: translate(0px,0px)}
+}
+@-webkit-keyframes polyline2_animate{
+    0%		{-webkit-transform: translate(0px,0px)}
+    25%	    {-webkit-transform: translate(14px,8px);} 
+    50%		{-webkit-transform: translate(0px,0px)}
+    75%	    {-webkit-transform: translate(-14px,8px);} 
+	100%	{-webkit-transform: translate(0px,0px)}
+}
+@-webkit-keyframes polyline2_animateN{
+    0%		{-webkit-transform: rotateX(0deg)}
+    25%	    {-webkit-transform: rotateX(70deg);} 
+    30%		{-webkit-transform: rotateX(0deg)}
+    75%	    {-webkit-transform: rotateX(-70deg);} 
+	100%	{-webkit-transform: rotateX(0deg)}
+}
+.polyline3{
+    position: absolute;
+    width: 14%;
+    top: 71%;
+    left: 7%;
+    -webkit-animation: polyline2_animate 20s linear infinite both;
+}
+.rocket{
+    position: absolute;
+    width: 11%;
+    top: 26%;
+    left: 12%;
+    -webkit-animation: rocket_animate .3s linear infinite both;
+}
+@-webkit-keyframes rocket_animate{
+    0%		{-webkit-transform: translate(0px,0px)}
+    25%		{-webkit-transform: translate(2px,2px);}
+    50%		{-webkit-transform: translate(0px,2px);}
+    75%		{-webkit-transform: translate(2px,0px);}
+	100%	{-webkit-transform: translate(2px,2px);}
+}
+@-webkit-keyframes play_animate{
+    0%		{-webkit-transform: scale(1)}
+    50%		{-webkit-transform: scale(1.05);}
+	100%	{-webkit-transform: scale(1)}
+}

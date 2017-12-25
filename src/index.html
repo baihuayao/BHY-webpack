@@ -1,12 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<title>积分夺宝</title>
+	<meta charset="UTF-8">
+	<!-- 正式环境打开 -->
+	<!-- 禁止页面缩放 -->
+	<meta content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<!--忽略页面中的数字识别为电话号码-->
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=123">
+	<!-- jquery -->
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>              
 </head>
 <body>
-    
+	<div class="container">
+		<img src="img/bg.jpg">
+		<div class="ani-box">
+			<div class="play-icon"><img src="img/playIcon.png"></div>
+			<div class="play-icon play-icon2"><img src="img/playIcon.png"></div>
+			<div class="polyline1"><img src="img/polyline1.png"></div>
+			<div class="polyline2"><div class="polyline2N"><img src="img/polyline2.png"></div></div>
+			<div class="polyline3"><img src="img/polyline2.png"></div>
+			<div class="rocket"><img src="img/rocket2.png"></div>
+		</div>
+		<div class="title"><img src="img/title.png"></div>
+		<div class="coupons"><img src="img/coupons.png"></div>
+		<div class="play-bg">
+			<img src="img/play-bg.png">
+			<div class="play-button"><img src="img/play-button.png"></div>
+		</div>
+		<div class="play-over"><img src="img/play-over.png"></div>
+		<div class="integral-box">
+			<div class="money-icon"><img src="img/moneyIcon.png"></div>
+			<div class="integral-text">我的积分： 0</div>
+			<div class="progress-bal-box">
+				<div class="progress-bal"></div>
+			</div>
+			<div class="people-text">
+				<div class="already-text">0<br />已参与人次</div>
+				<div class="remaining-text">0<br />剩余人次</div>
+			</div>
+		</div>
+		<div class="play-num-box">
+			<img src="img/numBg.png">
+			<div class="play-num">
+				<i class="Num1">0</i>
+				<i class="Num2">0</i>
+				<i class="Num3">0</i>
+				<i class="Num4">0</i>
+			</div>
+		</div>
+		<div class="rule-box">
+			<img src="img/ruleBg.png">
+			<div class="rule-title"><img src="img/ruleTitle.png"></div>
+			<div class="rule-text">
+				规则详情<br />
+				规则详情<br />
+				规则详情<br />
+				规则详情<br />
+				规则详情<br />
+			</div>
+		</div>
+		<div class="winning-box">
+			<img src="img/winningBg1.png">
+			<div class="winning-list"></div>
+			<div class="my-winning"></div>
+			<div class="winning-box-list">
+			</div>
+			<div class="winning-box-my">
+			</div>
+		</div>
+		<div class="buy-box">
+			<img src="img/buyBg.png">
+			<div class="buy-t1">夺宝价格: 260积分</div>
+			<div class="buy-t2">夺宝价值: 600积分</div>
+			<div class="buy-t3">参与次数:
+				<div class="amount-box">
+					<i class="amount-num">1</i>
+					<i class="add">+</i>
+					<i class="less">-</i>
+				</div>
+			</div>
+			<div class="buy-t4">(每人最多可购买0个)</div>
+			<div class="buy-button"><img src="img/buy.png"></div>
+			<div class="close"><img src="img/close.png"></div>
+		</div>
+		<div class="jfbz"><img src="img/jfbz.png"></div>
+		<div class="gmcg"><img src="img/gmcg.png"></div>
+		<div class="ccsx"><img src="img/ccsx.png"></div>
+		<div class="ddsx"><img src="img/ddsx.png"></div>
+		<div class="info-box">
+			<div class="name-bg">
+				<i>收货人：</i>
+				<input class="name-info" type="text" maxlength="50">
+			</div>
+			<div class="phone-bg">
+				<i>手机号：</i>
+				<input class="phone-info" type="number">
+			</div>
+			<div class="add-bg">
+				<i>详细地址：</i>
+				<input class="add-info" type="text" maxlength="200">
+			</div>
+			<div class="submit-button">提交</div>
+			<div class="close-button">关闭</div>
+		</div>
+		<div class="info-box2">
+			<img src="img/bg.png">
+			<div class="ticket-box">
+				<img src="img/buyBg.png">
+				<div class="ticket-title">您的劵码为：</div>
+				<div class="ticket-text"></div>
+				<div class="ticket-end">(请长按或截屏保存)</div>
+				<div class="ticket-close"><img src="img/close.png"></div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
