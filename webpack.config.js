@@ -6,11 +6,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: './start.js',
+    devtool: 'inline-source-map',
     output: {
         filename: 'js/[chunkhash].js',
         path: path.resolve(__dirname,'dist'),
-        publicPath: 'dist/',
-        sourceMapFilename: '[name].map'
+        // publicPath: 'dist/',
+        // sourceMapFilename: '[name].map'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),       // 清理文件
@@ -30,7 +31,7 @@ module.exports = {
                 drop_console: true,             // 删除所有的 'console'语句
                 collapse_vars: true,            // 内嵌定义了但是只用到一次的变量
                 reduce_vars: true,              // 提取出出现多次但是没有定义成变量去引用的静态值
-            }
+            },
         }),
         new ExtractTextPlugin({                 // 独立打包css文件
             filename: (getPath) =>{
@@ -46,13 +47,13 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.(png|jpg|jpeg|gif)$/,
-                loader: 'url-loader?limit=8192&name=img/[hash:8].[name].[ext]'
+                test: /\.html$/,
+                loader: 'html-loader'
             },
             {
-        　　　　　test: /\.html$/,
-        　　　　　loader: 'html-withimg-loader'
-    　　　　 },
+                test: /\.(png|jpg|jpeg|gif)$/,
+                loader: 'url-loader?limit=8192&name=img/[hash:8].[ext]'
+            },
             {
                 test: /\.css$/,                 // 独立打包css文件
                 use: ExtractTextPlugin.extract({
@@ -74,9 +75,6 @@ module.exports = {
         ]
     },
     devServer: {
-        historyApiFallback: true,
-        contentBase: path.join(__dirname,'dist'),
-        inline: true,
-        port: 9000
+        contentBase: './src'
     }
 };

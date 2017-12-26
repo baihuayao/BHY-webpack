@@ -11,3 +11,11 @@ npm run build
 
 #### 图片压缩
 gulp tinypng
+
+#### 开启本地运行环境
+npm run start
+
+##### 代码相关
+import {a,b} from './index.js';
+export {c,d};
+require('../img/bg.png');
