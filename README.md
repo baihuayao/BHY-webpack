@@ -1,21 +1,18 @@
 # BHY-webpack
 
-### 介绍
-集成文件打包，图片压缩功能。
-
-#### 下载插件
+#### start
 npm install
 
-#### 文件打包
+#### build
 npm run build
 
-#### 图片压缩
+#### picture compression
 gulp tinypng
 
-#### 开启本地运行环境
+#### open local environment
 npm run start
 
-##### 代码相关
+##### code relevant
 import {a,b} from './index.js';
 
 export {c,d};
