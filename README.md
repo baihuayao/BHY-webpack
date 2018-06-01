@@ -1,18 +1,18 @@
 # BHY-webpack
 
-#### start
+### start
 npm install
 
-#### build
+### build
 npm run build
 
-#### picture compression
+### picture compression
 gulp tinypng
 
-#### open local environment
+### open local environment
 npm run start
 
-##### code relevant
+#### code relevant
 import {a,b} from './index.js';
 
 export {c,d};
